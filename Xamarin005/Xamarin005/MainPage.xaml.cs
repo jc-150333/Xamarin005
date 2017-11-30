@@ -62,7 +62,7 @@ namespace Xamarin005
         public void InsertClicked(object sender, EventArgs e)
         {
             //Userテーブルに適当なデータを追加する
-            UserModel.insertUser(1, "鈴木");
+            UserModel.insertUser("鈴木");
             UserModel.insertUser("田中");
             UserModel.insertUser("斎藤");
 
