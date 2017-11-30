@@ -23,7 +23,7 @@ namespace Xamarin005
             layout.Children.Add(Insert);
             Insert.Clicked += InsertClicked;
 
-            //--------------------------------デリートボタン------------------------------
+            /*--------------------------------デリートボタン------------------------------
             var Delete = new Button
             {
                 WidthRequest = 60,
@@ -31,7 +31,7 @@ namespace Xamarin005
                 TextColor = Color.Blue,
             };
             layout.Children.Add(Delete);
-            Delete.Clicked += DeleteClicked;
+            Delete.Clicked += DeleteClicked;*/
 
             //--------------------------------セレクトボタン------------------------------
             var Select = new Button
@@ -68,11 +68,12 @@ namespace Xamarin005
 
         }
 
+        /*
         public void DeleteClicked(object sender, EventArgs e)
         {
             //UserModel008.deleteUser("鈴木");
 
-        }
+        }*/
     }
 
 
