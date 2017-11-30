@@ -8,7 +8,7 @@ namespace Xamarin005
     [Table("User")]
     public class UserModel
     {
-        //主キーー　自動採番される
+        //主キーー　自動採番される*/
         [PrimaryKey, AutoIncrement, Column("_id")]
         //id列
         public int Id { get; set; }
