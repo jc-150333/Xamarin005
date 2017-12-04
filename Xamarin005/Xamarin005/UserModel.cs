@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SQLite;
+using System.Linq;
 
 namespace Xamarin005
 {
@@ -8,6 +9,7 @@ namespace Xamarin005
     [Table("User")]
     public class UserModel
     {
+
         //主キーー　自動採番される*/
         [PrimaryKey, AutoIncrement, Column("_id")]
         //id列
@@ -70,6 +72,48 @@ namespace Xamarin005
                     //データベースに指定したSQLを発行します
                     return db.Query<UserModel>("SELECT * FROM [User] ");
 
+                }
+                catch (Exception e)
+                {
+
+                    System.Diagnostics.Debug.WriteLine(e);
+                    return null;
+                }
+            }
+        }
+
+
+        /*******************オーダーメソッド**************************************/
+        public static List<UserModel> orderUser()
+        {
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+
+                try
+                {
+                    //データベースに指定したSQLを発行します
+                    return db.Query<UserModel>("SELECT * FROM [User] WHERE [Id} = 1 ORDER BY [Id] DESC");
+
+                }
+                catch (Exception e)
+                {
+
+                    System.Diagnostics.Debug.WriteLine(e);
+                    return null;
+                }
+            }
+        }
+
+        /*******************サーチメソッド*************************************
+        public IEnumerable<UserModel> serchUser()
+        {
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+
+                try
+                {
+                    //データベースに指定したSQLを発行します
+                    return db.Table<UserModel>.Where(m => m.Id == 1));
                 }
                 catch (Exception e)
                 {

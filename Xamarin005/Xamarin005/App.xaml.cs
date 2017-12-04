@@ -20,7 +20,7 @@ namespace Xamarin005
 
             InitializeComponent();
 
-            MainPage = new Xamarin005.MainPage();
+            MainPage = new SamplePage();
         }
 
         protected override void OnStart()
