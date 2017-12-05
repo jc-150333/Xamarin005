@@ -19,7 +19,7 @@ namespace Xamarin005
 
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
-            //-------------------------------インサートボタン-------------------------------
+            //-------------------------------インサートボタン--------------------------------
             var Insert = new Button
             {
                 WidthRequest = 60,
